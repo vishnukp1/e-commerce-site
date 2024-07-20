@@ -1,9 +1,11 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import cartRoutes from './src/routes/cartRoutes.js';
 import orderRoutes from './src/routes/orderRoutes.js';
 import productRoutes from "./src/routes/productRoutes.js";
 import cors from "cors"
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -15,7 +17,7 @@ app.use('/api/product', productRoutes);
 
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/codeme", {
+  .connect("mongodb+srv://vishnutoanother:bFhfSQKTIxMxpE8E@cluster0.8zjxxq6.mongodb.net/codeme", {
     useNewUrlParser: true,
 
     useUnifiedTopology: true,

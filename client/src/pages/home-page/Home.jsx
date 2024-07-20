@@ -1,10 +1,11 @@
 import ShoppingItems from "../../components/ShoppingItems";
-import { items } from "../../data/BabyProduct";
 import CustomButton from "../../components/Buttun";
 import { SLIDER } from "../../assets";
 import CarouselScreen from "../../components/Carousel/Carousel";
+import { useFetchProducts } from "../../hooks/productHook";
 
 const Home = () => {
+  const { products, error } = useFetchProducts();
   return (
     <div>
       <div className="w-full h-fit  flex justify-center items-center text-white border-y border-gray-300 mt-4 mb-6">
@@ -37,7 +38,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <ShoppingItems item={items} />
+        <ShoppingItems item={products} />
       </div>
     </div>
   );
