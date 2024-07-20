@@ -1,10 +1,11 @@
-import Home from "../pages/home-page/Home";
+
+import { HomePage } from "../pages";
 import { homePath} from "./route.constant";
 
 const routes = [
   {
     path: homePath,
-    component: Home, 
+    component: HomePage, 
     exact: true,
   },
  
