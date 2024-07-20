@@ -23,8 +23,8 @@ const Home = () => {
       </div>
       <CarouselScreen />
       <div>
-        <div className="flex gap-16 mt-6 mb-11 mx-11 items-center">
-          <span className="text-[2.8rem] font-light opacity-70">
+        <div className="sm:flex gap-16 mt-6 mb-11 mx-11  sm:items-center xs:ml-24   ">
+          <span className="text-[2.8rem] font-light opacity-70 xs:ml-6  ">
             Our Top Categories
           </span>
           <div className="flex gap-2">
