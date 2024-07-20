@@ -1,6 +1,9 @@
 import { WHITE_BAG } from "../assets";
+import useAddToCart from "../hooks/cartHook";
+
 
 const ShoppingItems = ({ item }) => {
+  const { addToCart, loading } = useAddToCart();
   return (
     <div className="mb-10  bg-slate-50 mx-11">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center">
@@ -11,7 +14,6 @@ const ShoppingItems = ({ item }) => {
             className="p-4 bg-white shadow-lg rounded-lg relative"
           >
             <img
-              data-aos="fade-in"
               src={data.image}
               alt={data.name}
               className="h-[180px] w-[260px] object-cover rounded-md"
@@ -51,7 +53,10 @@ const ShoppingItems = ({ item }) => {
               </div>
             </div>
             <div className="text-center ">
-              <button className="bg-red-500 h-11 w-56 pl-12 text-white flex justigy-center items-center  rounded-md shadow-md transition-colors duration-300 hover:bg-red-600">
+              <button className="bg-red-500 h-11 w-56 pl-12 text-white flex justigy-center items-center  rounded-md shadow-md transition-colors duration-300 hover:bg-red-600"
+                 onClick={() => addToCart(data.id)}
+                 disabled={loading}
+              >
                 <div>
                   <img src={WHITE_BAG} alt="Logo" className="h-5 w-5" />
                 </div>

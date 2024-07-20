@@ -4,12 +4,9 @@ import CustomButton from "../../components/Buttun";
 import { SLIDER } from "../../assets";
 import CarouselScreen from "../../components/Carousel/Carousel";
 
-
 const Home = () => {
   return (
     <div>
-    
-
       <div className="w-full h-fit  flex justify-center items-center text-white border-y border-gray-300 mt-4 mb-6">
         <CustomButton
           content={"BABIES"}
