@@ -43,3 +43,24 @@ export const useAddToCart = () => {
 
   return { addToCart, loading };
 };
+
+
+export const useFetchCart = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+      const fetchCart = async () => {
+          try {
+              const response = await Axios.get('/api/cart/view');
+              setCartItems(response.data.data);
+          } catch (err) {
+              setError(err.message);
+          }
+      };
+
+      fetchCart();
+  }, []);
+
+  return { cartItems, error };
+};
