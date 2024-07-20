@@ -22,7 +22,13 @@ const Home = () => {
           className=" text-black py-2 px-4 rounded font-lato text-base font-normal leading-[40px] tracking-wide text-left"
         />
       </div>
+
+        {/* this is the moving carousel*/}
+
       <CarouselScreen />
+
+          {/* this is the product list session*/}
+
       <div>
         <div className="sm:flex gap-16 mt-6 mb-11 mx-11  sm:items-center xs:ml-24   ">
           <span className="text-[2.8rem] font-light opacity-70 xs:ml-6  ">
@@ -38,6 +44,9 @@ const Home = () => {
             </button>
           </div>
         </div>
+
+          {/* passing products data as props to the shopping item cards*/}
+
         <ShoppingItems item={products} />
       </div>
     </div>
