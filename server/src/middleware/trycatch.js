@@ -1,4 +1,4 @@
-// src/middleware/tryCatch.js
+
 const tryCatch = (controller) => {
     return async (req, res, next) => {
         try {
