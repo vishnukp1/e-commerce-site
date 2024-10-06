@@ -18,12 +18,13 @@ const Cart = () => {
                 className="h-32 w-full object-cover rounded-md mb-4"
               />
               <h2 className="text-lg font-bold">{item.productId.name}</h2>
-              <p className="text-sm text-gray-600">{item.productId.description}</p>
+              <p className="text-sm text-gray-600">
+                {item.productId.description}
+              </p>
               <div className="flex justify-between items-center mt-4">
                 <p className="font-bold text-lg">${item.productId.price}</p>
                 <p className="text-sm">Quantity: {item.quantity}</p>
               </div>
-             
             </div>
           ))
         )}
