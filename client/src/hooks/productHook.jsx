@@ -7,18 +7,18 @@ export const useFetchProducts = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await Axios.get("/api/product");
-        setProducts(response.data.data);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await Axios.get("/api/product");
+  //       setProducts(response.data.data);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     }
+  //   };
 
-    fetchProducts();
-  }, []);
+  //   fetchProducts();
+  // }, []);
 
   return { products, error };
 };
