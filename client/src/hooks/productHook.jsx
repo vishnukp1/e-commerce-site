@@ -3,22 +3,24 @@ import { Axios } from "../api/axois";
 import { toast } from "react-toastify";
 
 export const useFetchProducts = () => {
+  
   const [products, setProducts] = useState([]);
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     try {
-  //       const response = await Axios.get("/api/product");
-  //       setProducts(response.data.data);
-  //     } catch (err) {
-  //       setError(err.message);
-  //     }
-  //   };
 
-  //   fetchProducts();
-  // }, []);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await Axios.get("/api/product");
+        setProducts(response.data.data);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   return { products, error };
 };

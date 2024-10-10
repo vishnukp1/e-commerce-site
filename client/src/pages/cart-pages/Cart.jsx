@@ -24,6 +24,7 @@ const Cart = () => {
               <div className="flex justify-between items-center mt-4">
                 <p className="font-bold text-lg">${item.productId.price}</p>
                 <p className="text-sm">Quantity: {item.quantity}</p>
+           
               </div>
             </div>
           ))
